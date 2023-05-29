@@ -16,5 +16,6 @@ require("plugins/telescope")
 require("plugins/symbols-outline")
 require("plugins/nvim-go")
 require("plugins/gitsigns")
+require("plugins/focus")
 -- require("plugins/codeium") -- don't need
 -- require("plugins/tarbar")  -- don't need
