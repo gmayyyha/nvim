@@ -54,6 +54,11 @@ return require('packer').startup(function(use)
   use "saadparwaiz1/cmp_luasnip"
   use "rafamadriz/friendly-snippets"
   use "hrsh7th/cmp-path" -- 文件路径
+  use "hrsh7th/cmp-buffer"
+
+  -- vsnip
+  use {'hrsh7th/cmp-vsnip'}
+  use {'hrsh7th/vim-vsnip'}
 
   use 'dhananjaylatkar/cscope_maps.nvim' -- cscope keymaps
   use 'folke/which-key.nvim' -- optional

@@ -17,6 +17,7 @@ require("mason-lspconfig").setup({
     "jedi_language_server",
     "gopls",
     "pyright",
+    "vimls",
   },
 })
 
@@ -79,7 +80,18 @@ local on_attach = function(client, bufnr)
 end
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
-local servers = {"lua_ls", "pyright", "clangd", "gopls"}
+local servers = {"pyright", "clangd", "gopls", "pylsp", "vimls"}
+
+lspconfig.lua_ls.setup {
+  settings = {
+    Lua = {
+      diagnostics = {
+        globals = { "vim" }
+      }
+    }
+  },
+  on_attach = on_attach
+}
 
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {

@@ -24,6 +24,7 @@ keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
 -- bufferline
 keymap.set("n", "<C-l>", ":bnext<CR>")
 keymap.set("n", "<C-h>", ":bprevious<CR>")
+keymap.set("n", "<leader>bd", ":bd<CR>")
 
 -- symbols-outline
 keymap.set("n", "<F8>", ":SymbolsOutline<CR>")
