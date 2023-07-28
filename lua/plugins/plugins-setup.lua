@@ -60,14 +60,11 @@ return require('packer').startup(function(use)
   use {'hrsh7th/cmp-vsnip'}
   use {'hrsh7th/vim-vsnip'}
 
-  use 'dhananjaylatkar/cscope_maps.nvim' -- cscope keymaps
-  use 'folke/which-key.nvim' -- optional
-
   use "windwp/nvim-autopairs" -- 自动补全括号
   use "akinsho/bufferline.nvim"
 
   use {
-    'nvim-telescope/telescope.nvim', tag = '0.1.1',  -- 文件检索
+    'nvim-telescope/telescope.nvim', -- 文件检索
     requires = { {'nvim-lua/plenary.nvim'} }
   }
 
@@ -75,6 +72,9 @@ return require('packer').startup(function(use)
     'simrat39/symbols-outline.nvim',
     requires = { 'nvim-tree/nvim-web-devicons' }
   }
+
+  use 'dhananjaylatkar/cscope_maps.nvim' -- cscope keymaps
+  use 'folke/which-key.nvim' -- optional
 
   -- tagbar 
   use 'preservim/tagbar'
