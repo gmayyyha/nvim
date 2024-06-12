@@ -32,6 +32,10 @@ return require('packer').startup(function(use)
     requires = { 'nvim-tree/nvim-web-devicons' }
   }
 
+--  use {
+--    'neoclide/coc.nvim', branch = 'release'
+--  }
+
   use {
     'nvim-tree/nvim-tree.lua',
     requires = {
@@ -40,7 +44,8 @@ return require('packer').startup(function(use)
   }
 
   use 'nvim-treesitter/nvim-treesitter'
-  use 'p00f/nvim-ts-rainbow'
+--  use 'p00f/nvim-ts-rainbow'
+  use 'HiPhish/rainbow-delimiters.nvim'
 
   use {
     "williamboman/mason.nvim",
@@ -80,7 +85,8 @@ return require('packer').startup(function(use)
   use 'preservim/tagbar'
 
   use {
-    'crispgm/nvim-go',
+  --  'crispgm/nvim-go',
+    'ray-x/go.nvim',
     'ray-x/guihua.lua',
   }
 
@@ -89,6 +95,21 @@ return require('packer').startup(function(use)
   use 'Exafunction/codeium.vim'
 
   use 'beauwilliams/focus.nvim'
+
+  use {
+    'goolord/alpha-nvim',
+    requires = { 'nvim-tree/nvim-web-devicons' },
+    config = function ()
+        require'alpha'.setup(require'alpha.themes.startify'.config)
+    end
+  }
+
+  use {
+    'numToStr/Comment.nvim',
+    config = function()
+        require('Comment').setup()
+    end
+  }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

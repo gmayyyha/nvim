@@ -18,6 +18,9 @@ require("mason-lspconfig").setup({
     "gopls",
     "pyright",
     "vimls",
+    "bashls",
+    "jsonls",
+    "ansiblels",
   },
 })
 
@@ -28,7 +31,7 @@ require("mason-lspconfig").setup({
 --     - on_attach: a lua callback function to run after LSP atteches to a given buffer
 local lspconfig = require('lspconfig')
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
-local servers = {"pyright", "clangd", "gopls", "pylsp", "vimls"}
+local servers = {"pyright", "clangd", "gopls", "pylsp", "vimls", "jedi_language_server", "bashls", "jsonls", "ansiblels", "lua_ls"}
 
 lspconfig.lua_ls.setup {
   settings = {

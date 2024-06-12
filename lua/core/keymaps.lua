@@ -18,7 +18,7 @@ keymap.set("n", "<leader>sh", "<C-w>s")
 keymap.set("n", "<leader>nh", ":nohl<CR>")
 
 -- --------- plugins ---------
--- nvim-tre
+-- nvim-tree
 keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
 
 -- bufferline
