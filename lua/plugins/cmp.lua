@@ -44,6 +44,7 @@ cmp.setup({
     end, {
       "i",
       "s",
+      "c",
     }),
 
     ["<S-Tab>"] = cmp.mapping(function(fallback)
@@ -62,10 +63,10 @@ cmp.setup({
 
   -- 这里重要
   sources = cmp.config.sources({
+    { name = 'codeium' },
     { name = 'nvim_lsp' },
     { name = 'luasnip' },
     { name = 'path' },
-  }, {
     { name = 'buffer' },
   })
 })
