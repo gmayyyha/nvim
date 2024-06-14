@@ -33,7 +33,15 @@ local lspconfig = require('lspconfig')
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 local servers = {"pyright", "clangd", "gopls", "pylsp", "vimls", "jedi_language_server", "bashls", "jsonls", "ansiblels", "lua_ls"}
 
+
+for _, lsp in ipairs(servers) do
+  lspconfig[lsp].setup({
+    capabilities = capabilities,
+  })
+end
+
 lspconfig.lua_ls.setup({
+  capabilities = capabilities,
   settings = {
     Lua = {
       diagnostics = {
@@ -42,12 +50,6 @@ lspconfig.lua_ls.setup({
     }
   },
 })
-
-for _, lsp in ipairs(servers) do
-  lspconfig[lsp].setup({
-    capabilities = capabilities,
-  })
-end
 
 -- Customized on_attach function
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
