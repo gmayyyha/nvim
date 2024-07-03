@@ -32,6 +32,8 @@ keymap.set("n", "<F8>", ":SymbolsOutline<CR>")
 -- tagbar
 keymap.set("n", "<F7>", ":TagbarToggle<CR>")
 
+keymap.set('c', '<tab>', '<C-z>', { silent = false })
+
 -- codeium
     -- Change '<C-g>' here to any keycode you like.
 keymap.set('i', '<C-g>', function() return vim.fn['codeium#Accept']() end, { expr = true, silent = true })
