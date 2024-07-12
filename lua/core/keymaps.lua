@@ -14,7 +14,7 @@ keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 keymap.set("n", "<leader>sv", "<C-w>v", { desc = "Split window vertically" })
 keymap.set("n", "<leader>sh", "<C-w>s", { desc = "Split window horizontally" })
 keymap.set("n", "<leader>se", "<C-w>=", { desc = "Make split windows equal width & height" })
-keymap.set("n", "<leader>sx", ":close<CR>", { desc = "Close the current split window" })
+keymap.set("n", "<leader>sc", ":close<CR>", { desc = "Close the current split window" })
 
 keymap.set("n", "<leader>to", ":tabnew<CR>", { desc = "Open new tab" })
 keymap.set("n", "<leader>tc", ":tabclose<CR>", { desc = "Close current tab" })
@@ -25,9 +25,6 @@ keymap.set("n", "<leader>tp", ":tabp<CR>", { desc = "Go to previous tab" })
 keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlight" })
 
 -- --------- plugins ---------
--- nvim-tree
-keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", { desc = "Toggle file explorer" })
-
 -- bufferline
 keymap.set("n", "<C-l>", ":bnext<CR>", { desc = "Go to next buffer" })
 keymap.set("n", "<C-h>", ":bprevious<CR>", { desc = "Go to previous buffer" })

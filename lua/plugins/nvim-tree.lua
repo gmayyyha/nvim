@@ -27,13 +27,29 @@ vim.api.nvim_create_autocmd({ "VimResized" }, {
 require("nvim-tree").setup({
     sort_by = "case_sensitive",
     view = {
---        width = 5,
-        adaptive_size = true,
+        width = 35,
+--        relativenumber = true,
+--        adaptive_size = true,
 --        preserve_window_proportions = true,
     },
     actions = {
         open_file = {
-            resize_window = true,
-        }
+            window_picker = {
+                enable = true,
+            },
+        },
+    },
+    filters = {
+        custom = { ".DS_Store" },
+    },
+    git = {
+        ignore = false,
     }
 })
+
+local keymap = vim.keymap
+
+keymap.set("n", "<leader>ee", ":NvimTreeToggle<CR>", { desc = "Toggle file explorer" })
+keymap.set("n", "<leader>ef", ":NvimTreeFindFileToggle<CR>", { desc = "Toggle file explorer and focus cursor in file" })
+keymap.set("n", "<leader>ec", ":NvimTreeCollapse<CR>", { desc = "Collapse file explorer" })
+keymap.set("n", "<leader>er", ":NvimTreeRefresh<CR>", { desc = "Refresh file explorer" })
