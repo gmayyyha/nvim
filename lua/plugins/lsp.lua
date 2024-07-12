@@ -40,6 +40,13 @@ for _, lsp in ipairs(servers) do
   })
 end
 
+lspconfig.clangd.setup({
+    cmd = {
+        "/usr/bin/clangd",
+        "--background-index=false",
+    }
+})
+
 lspconfig.lua_ls.setup({
   capabilities = capabilities,
   settings = {
